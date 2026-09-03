@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@import "./css/reset.css" layer(base);
+@import "./css/layout.css" layer(base);
+@import "./css/components.css" layer(base);
+
+@theme{
+  --white:#FDF0D5;
+  --black: #000000;
+  --blue:#42A5F5;
+  --orange: #FB5607;
+}
+
+.anonymous-pro-bold {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.orbitron-bold {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ibm-plex-mono-regular {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-mono-bold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}

@@ -1,0 +1,7 @@
+.body{
+    @apply grid grid-rows-[auto_1fr_auto] min-h-svh;
+}
+
+.container{
+    @apply grid grid-cols-[repeat(auto-fill,48%)] justify-center gap-[2%];
+}
