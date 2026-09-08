@@ -7,7 +7,7 @@
 @theme{
   --white:#FDF0D5;
   --black: #000000;
-  --blue:#42A5F5;
+  --blue: #42A5F5;
   --orange: #FB5607;
 }
 
@@ -35,4 +35,9 @@
   font-family: "IBM Plex Mono", monospace;
   font-weight: 700;
   font-style: normal;
+}
+
+/* couleur blanc de l'icon date */
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }

@@ -1,7 +1,7 @@
 .body{
-    @apply grid grid-rows-[auto_1fr_auto] min-h-svh;
+    @apply min-h-svh bg-black grid grid-rows-[auto_1fr_auto] gap-[2%];
 }
 
 .container{
-    @apply grid grid-cols-[repeat(auto-fill,48%)] justify-center gap-[2%];
+    @apply grid grid-cols-[repeat(auto-fill,48%)] justify-center gap-[2%] h-full;
 }

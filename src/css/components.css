@@ -1,3 +1,7 @@
 .sign{
-    @apply border;
+    @apply border border-(--orange) rounded-xl text-center py-[2%] text-white;
+}
+
+.sign--contains{
+    @apply flex flex-col gap-[2%] justify-center;
 }
