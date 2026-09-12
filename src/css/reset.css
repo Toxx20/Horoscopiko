@@ -11,6 +11,10 @@ h3{
     font-size:20px;
     font-weight: 700;
 }
+h4{
+    font-family: ibm-plex-mono-regular;
+    font-size : 10px;
+}
 
 p{
     font-family: anonymous-pro-bold;

@@ -6,4 +6,14 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),tailwindcss()],
+  server : {
+    proxy:{
+      '/horoscope-api': {
+        target: 'https://freehoroscopeapi.com',
+        changeOrigin: true,
+        rewrite: (path) =>
+          path.replace(/^\/horoscope-api/, '')
+      }
+    }
+  }
 })
