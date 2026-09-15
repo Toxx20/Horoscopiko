@@ -1,5 +1,5 @@
-export function Button ({ onClick,children}){
-     return <button className="bg-(--blue)" onClick={onClick}>
+export function Button ({ onClick,children,className}){
+    return <button className={className} onClick={onClick}>
                 {children}
             </button>
 }

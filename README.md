@@ -1,16 +1,35 @@
-# React + Vite
+# Horoscopiko
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+horoscopiko est une application web responsive qui vous donne l'horoscope du jour, de semaines ou de mois selon ce que vous souhaitez, il est à noter que l'affichage est en anglais et tout les données proviennent de l'api `https://freehoroscopeapi.com/`.
 
-Currently, two official plugins are available:
+# Tech : REACT.JS + TAILWIND CSS V4 avec VITE + FREEHOROCOPEAPI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Capture de Horoscopiko
 
-## React Compiler
+![image My Todo](./public/capture_Horocopiko.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+ou [visiter le sur Vercel](https://horoscopiko.vercel.app/)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Architecture du projet
+
+- src/assets : contient tous les fichiers svg du projet, c'est à dire les icônes.
+- src/components : contient tous les composants réutilisables de l'application.
+    * Buton.jsx: comme son nom l'indique il retourne un bouton
+    * Card.jsx: représente le `card` de chaque sign d'horoscope.
+
+- src/layout/Container.jsx: est le composant qui affiche chaque `card` avec les fonctionnaliés qui sont la redirection vers une autre page dédié à ce que l'uilsateur a choisit, par exemple il a cliqué sur le `card Aries`, alors il sera redirigé vers l'horoscope de **Aries**.
+- src/layout/ContainerView.jsx: est le composant suivant après le Container.jsx, après le **clic de l'utilisateur**, il sera ici dont il peut cliqué sur `Monthly ou Weekly, Daily es la valeur par défaut`.
+- src/layout/Footer.jsx: est le footer de la page
+-src/layout/Header.jsx: est l'entête de Horoscopiko dont on voit la **la date et l'heure actuelle**.
+
+- src/pages/Index.jsx : est l'assemblage des composants `Header.jsx,Container.jsx et Footer.jsx` pour qu'il ressemble en une page.
+- src/pages/View.jsx : idem comme Index.jsx mais juste le `Container.jsx changé en ContainerView.jsx`.
+
+- src/styles/reset.css : repreésente le style par défaut **des baliles HTML**.
+
+# Obtenir le projet
+1)   Cloner le projet.
+2)  Installer le dépendance : 
+    * cd Horoscopiko
+    * npm install (pour installer les dépendaces)

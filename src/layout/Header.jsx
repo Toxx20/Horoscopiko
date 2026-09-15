@@ -9,7 +9,7 @@ export function Header (){
     },[dateState])
 
     return <header className="flex flex-col gap-[5%] items-center pt-[5%]">
-                <h2 className="text-(--white) orbitron-bold ">{`${dateState.getDate()}-${dateState.getMonth()}-${dateState.getFullYear()}`} </h2>
+                <h2 className="text-(--white) orbitron-bold ">{`${dateState.getDate()}-${dateState.getMonth()+1}-${dateState.getFullYear()}`} </h2>
                 <h1 className="text-(--white) orbitron-bold ">{`${dateState.getHours()}:${dateState.getMinutes()}`} </h1>
             </header>
 }

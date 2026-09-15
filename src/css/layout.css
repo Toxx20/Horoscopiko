@@ -3,5 +3,5 @@
 }
 
 .container{
-    @apply grid grid-cols-[repeat(auto-fill,48%)] justify-center gap-[2%] h-full;
+    @apply grid grid-cols-[repeat(auto-fill,48%)] justify-center gap-[2%] h-auto lg:grid-cols-[repeat(auto-fill,23%)];
 }
