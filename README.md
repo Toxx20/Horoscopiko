@@ -13,6 +13,18 @@ ou [visiter le sur Vercel](https://horoscopiko.vercel.app/)
 
 # Architecture du projet
 
+- api/horoscdope.js : configuration de l'api sur vercel
+- vite.config.js: l'ajout de `server : {
+    proxy:{
+      '/horoscope-api': {
+        target: 'https://freehoroscopeapi.com',
+        changeOrigin: true,
+        rewrite: (path) =>
+          path.replace(/^\/horoscope-api/, '')
+      }
+    }
+  }` pour qu'il fonctionne en local.
+
 - src/assets : contient tous les fichiers svg du projet, c'est à dire les icônes.
 - src/components : contient tous les composants réutilisables de l'application.
     * Buton.jsx: comme son nom l'indique il retourne un bouton

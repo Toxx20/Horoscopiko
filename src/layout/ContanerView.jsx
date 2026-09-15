@@ -31,10 +31,14 @@ export function ContainerView(){
 
     useEffect(() => {
         async function fetchDataHoroscope() {
-            const dataAwait = await fetch(
-                `/horoscope-api/api/v1/get-horoscope/${period}?sign=${signData}`
-            )
-            const dataJson = await dataAwait.json()
+            const url = import.meta.env.DEV
+                ? `/horoscope-api/api/v1/get-horoscope/${period}?sign=${signData}`
+                : `/api/horoscope?sign=${signData}&period=${period}`
+
+            const response = await fetch(url)
+
+            const dataJson = await response.json()
+
             setDataState(dataJson)
         }
         fetchDataHoroscope()
